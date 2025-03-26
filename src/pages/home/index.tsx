@@ -59,7 +59,7 @@ export default function Home() {
           <Heading size="lg">Perguntas frequentes</Heading>
           {[
             {
-              question: "Qual o preço médio das consultas?",
+              question: "Qual o preço médio do tratamento?",
               answer: "A partir de 150",
             },
             {
@@ -67,7 +67,7 @@ export default function Home() {
               answer: "De segunda a sexta, das 8h às 18h.",
             },
             {
-              question: "Posso cancelar minha consulta?",
+              question: "Posso cancelar o tratamento?",
               answer: "Sim, com até 24h de antecedência.",
             },
           ].map((item, index) => (
