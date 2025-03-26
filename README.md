@@ -1,6 +1,6 @@
-# Advogado
+# PetShop
 
-Advogado is a dentist website where patients can select their preferred date and time for appointments with just a few clicks.
+PetShop is a dentist website where patients can select their preferred date and time for appointments with just a few clicks.
 
 # Features
 

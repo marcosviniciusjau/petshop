@@ -64,12 +64,12 @@ export default function Register() {
   }
   return (
     <>
-      <NextSeo title="Crie uma conta | Advogado" />
+      <NextSeo title="Crie uma conta | PetShop" />
 
       <HeaderHome />
       <Container>
         <Header>
-          <Heading as="strong">Bem-vindo a Advogado!</Heading>
+          <Heading as="strong">Bem-vindo a PetShop!</Heading>
           <Text>
             Precisamos de algumas informações para criar seu perfil! Ah, você
             pode editar essas informações depois.

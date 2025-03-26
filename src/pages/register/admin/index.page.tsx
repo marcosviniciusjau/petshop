@@ -57,12 +57,12 @@ export default function RegisterAdmin() {
   }
   return (
     <>
-      <NextSeo title="Crie uma conta de Administrador | Advogado" />
+      <NextSeo title="Crie uma conta de Administrador | PetShop" />
 
       <HeaderHome />
       <Container>
         <Header>
-          <Heading as="strong">Bem-vindo a Advogado!</Heading>
+          <Heading as="strong">Bem-vindo a PetShop!</Heading>
           <Text>
             Precisamos de algumas informações para criar seu perfil! Ah, você
             pode editar essas informações depois.

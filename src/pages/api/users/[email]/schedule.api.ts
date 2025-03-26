@@ -80,7 +80,7 @@ export default async function handler(
     calendarId: 'primary',
     conferenceDataVersion: 1,
     requestBody: {
-      summary: `Advogado: Paciente ${name} `,
+      summary: `PetShop: Paciente ${name} `,
       description: observations,
       start: {
         dateTime: schedulingDate.format(),

@@ -129,7 +129,7 @@ export default function Schedule({ user }: ScheduleProps) {
 
   return (
     <>
-      <NextSeo title={`Agendar com ${"Advogado"}| Advogado`} />
+      <NextSeo title={`Agendar com ${"PetShop"}| PetShop`} />
 
       <Header />
       {isSignedId ? (
@@ -202,7 +202,7 @@ export default function Schedule({ user }: ScheduleProps) {
             </Consultas>
             <DoctorHeader>
               <ProfilePhoto src={user.profileImgUrl} />
-              <Heading>Advogado</Heading>
+              <Heading>PetShop</Heading>
               <Text>{user.bio}</Text>
               <Text>{user.email}</Text>
             </DoctorHeader>
@@ -241,7 +241,7 @@ export default function Schedule({ user }: ScheduleProps) {
         </Container>
       ) : (
         <>
-          <NextSeo title="Não autorizado | Advogado" noindex />
+          <NextSeo title="Não autorizado | PetShop" noindex />
 
           <ContainerLogin>
             <Heading>Você precisa fazer login para acessar essa página</Heading>

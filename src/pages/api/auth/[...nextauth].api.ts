@@ -52,7 +52,7 @@ export function buildNextAuthOptions(
             pass: env.NEXT_API_KEY,
           },
         },
-        from: `Advogado <no-reply-dental-clinic-plus@${env.NEXT_EMAIL_FROM}>`,
+        from: `PetShop <no-reply-dental-clinic-plus@${env.NEXT_EMAIL_FROM}>`,
         sendVerificationRequest({
           identifier: email,
           url,
@@ -74,7 +74,7 @@ export function buildNextAuthOptions(
               const emailResponse = await resend.emails.send({
                 to: identifier,
                 from: provider.from,
-                subject: `Acesse a agenda de Advogado`,
+                subject: `Acesse a agenda de PetShop`,
                 text: text(),
                 html: html({ url, host, theme }),
               })
@@ -166,8 +166,8 @@ style="background: ${color.mainBackground}; max-width: 48rem; margin: auto; bord
 <tr align="center"
 style="padding: 10px 0px; font-size: 22px; font-family: Helvetica, Arial, sans-serif; color: ${color.text};">
 <td>
-<img src="https://dental-clinic-two-gamma.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.b500b2f4.png&w=128&q=75" alt="Logo de Dente da Advogado"/>
-<h2>Advogado</h2>
+<img src="https://dental-clinic-two-gamma.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.b500b2f4.png&w=128&q=75" alt="Logo de Dente da PetShop"/>
+<h2>PetShop</h2>
 </td>
 </tr>
 
@@ -196,12 +196,12 @@ Se você não solicitou esse link, por favor apenas ignore
 </tr>
 </table>
 <footer>
-<p style="font-size: 14px; line-height: 22px; font-family: Helvetica, Arial, sans-serif; color: ${color.text};">Copyright © ${new Date().getFullYear()} Advogado </p>
+<p style="font-size: 14px; line-height: 22px; font-family: Helvetica, Arial, sans-serif; color: ${color.text};">Copyright © ${new Date().getFullYear()} PetShop </p>
 </footer>
 </body>
 `
 }
 
 function text() {
-  return `Acesse a agenda de Advogado`
+  return `Acesse a agenda de PetShop`
 }

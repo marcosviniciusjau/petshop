@@ -117,7 +117,7 @@ export default function TimeIntervals() {
       {isSignedId ? (
         <>
           <NextSeo
-            title="Selecione sua disponibilidade | Advogado"
+            title="Selecione sua disponibilidade | PetShop"
             noindex
           />
 
@@ -191,7 +191,7 @@ export default function TimeIntervals() {
         </>
       ) : (
         <>
-          <NextSeo title="Não autorizado | Advogado" noindex />
+          <NextSeo title="Não autorizado | PetShop" noindex />
 
           <ContainerLogin>
             <Heading>Você precisa fazer login para acessar essa página</Heading>

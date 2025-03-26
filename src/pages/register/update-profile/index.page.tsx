@@ -62,7 +62,7 @@ export default function updateProfile() {
 
   return (
     <>
-      <NextSeo title="Atualize seu perfil | Advogado" noindex />
+      <NextSeo title="Atualize seu perfil | PetShop" noindex />
       {isSignedId ? (
         <Container>
           <Header>
