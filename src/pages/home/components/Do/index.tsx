@@ -7,10 +7,10 @@ import { Heading, Text } from "@marcos-vinicius-design-system/react";
 import {
   Container,
   Hero,
-  Implantes,
-  Aparelhos,
-  Consultas,
-  Limpezas,
+  Racoes,
+  Vacinas,
+  Medicamentos,
+  Banho,
 } from "./styles";
 import Image from "next/image";
 
@@ -21,7 +21,7 @@ export function Do() {
         <Heading size="3xl">o que fazemos</Heading>
       </Hero>
 
-      <Implantes>
+      <Banho>
         <Image
           src={banho}
           height={200}
@@ -35,9 +35,9 @@ export function Do() {
           Cuidamos do seu pet com serviços de banho e tosa, garantindo higiene e
           bem-estar para o seu melhor amigo.
         </Text>
-      </Implantes>
+      </Banho>
 
-      <Aparelhos>
+      <Medicamentos>
         <Image
           src={medicamento}
           height={200}
@@ -51,9 +51,9 @@ export function Do() {
           Oferecemos uma variedade de medicamentos veterinários para garantir a
           saúde e o tratamento adequado do seu pet.
         </Text>
-      </Aparelhos>
+      </Medicamentos>
 
-      <Consultas>
+      <Racoes>
         <Image
           src={racoes}
           height={200}
@@ -67,9 +67,9 @@ export function Do() {
           Trabalhamos com rações de alta qualidade para atender às necessidades
           nutricionais do seu pet em todas as fases da vida.
         </Text>
-      </Consultas>
+      </Racoes>
 
-      <Limpezas>
+      <Vacinas>
         <Image
           src={vacinas}
           height={200}
@@ -83,7 +83,7 @@ export function Do() {
           Proteja seu pet com as vacinas essenciais para garantir a saúde e
           prevenir doenças contagiosas.
         </Text>
-      </Limpezas>
+      </Vacinas>
     </Container>
   );
 }

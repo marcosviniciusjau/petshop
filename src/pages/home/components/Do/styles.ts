@@ -31,7 +31,7 @@ export const Hero = styled('div', {
   },
 })
 
-export const Implantes = styled('div', {
+export const Banho = styled('div', {
   maxWidth: 315,
   gridArea: 'image1',
   display: 'flex',
@@ -41,7 +41,7 @@ export const Implantes = styled('div', {
   overflow: 'hidden',
 })
 
-export const Aparelhos = styled('div', {
+export const Medicamentos = styled('div', {
   maxWidth: 315,
   display: 'flex',
   gridArea: 'text1',
@@ -55,7 +55,7 @@ export const Aparelhos = styled('div', {
   },
 })
 
-export const Consultas = styled('div', {
+export const Racoes = styled('div', {
   gridArea: 'text3',
   maxWidth: 315,
   marginTop: '$16',
@@ -65,7 +65,8 @@ export const Consultas = styled('div', {
   gap: '$4',
   overflow: 'hidden',
 })
-export const Limpezas = styled('div', {
+
+export const Vacinas = styled('div', {
   gridArea: 'image2',
   maxWidth: 315,
   marginTop: '$16',
