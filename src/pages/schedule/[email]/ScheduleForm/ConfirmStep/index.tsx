@@ -20,8 +20,8 @@ const confirmFormSchema = z.object({
   name: z.string().min(3, { message: "O nome precisa no mínimo 3 caracteres" }),
   email: z.string().email({ message: "Digite um e-mail válido" }),
   observations: z
-    .enum(["Check-up", "Tratamento", "Implante"])
-    .default("Tratamento"),
+    .enum(["Banho e tosa", "Vacinas", "Ração", "Medicamentos"])
+    .default("Banho e tosa"),
 });
 
 type ConfirmFormData = z.infer<typeof confirmFormSchema>;
@@ -49,7 +49,7 @@ export function ConfirmStep({
     defaultValues: {
       name: session.data?.user.name,
       email: session.data?.user.email,
-      observations: "Tratamento",
+      observations: "Banho e tosa",
     },
     resolver: zodResolver(confirmFormSchema),
   });
