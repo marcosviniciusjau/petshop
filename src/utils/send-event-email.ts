@@ -69,7 +69,7 @@ style="background: ${color.mainBackground}; max-width: 48rem; margin: auto; bord
 style="padding: 10px 0px; font-size: 22px; font-family: Helvetica, Arial, sans-serif; color: ${color.text};">
 <td>
 <img src="https://petshop-jade-xi.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.248d1717.png&w=64&q=75" alt="Logo de Petshop"/>
-<h2>Dental Clinic+</h2>
+<h2>Petshop</h2>
 </td>
 </tr>
 
@@ -117,8 +117,8 @@ style="background: ${color.mainBackground}; max-width: 48rem; margin: auto; bord
 <tr align="center"
 style="padding: 10px 0px; font-size: 22px; font-family: Helvetica, Arial, sans-serif; color: ${color.text};">
 <td>
-<img src="https://petshop-jade-xi.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.248d1717.png&w=64&q=75" alt="Logo de Dente da Dental Clinic+"/>
-<h2>Dental Clinic+</h2>
+<img src="https://petshop-jade-xi.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.248d1717.png&w=64&q=75" alt="Logo de Dente da Petshop"/>
+<h2>Petshop</h2>
 </td>
 </tr>
 
