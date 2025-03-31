@@ -7,6 +7,7 @@ import { prisma } from '@/lib/prisma'
 import { google } from 'googleapis'
 import { getGoogleOAuthToken } from '@/lib/google'
 import { sendEventEmail } from '@/utils/send-event-email'
+import { env } from '@/env/env'
 
 export default async function handler(
   req: NextApiRequest,
@@ -16,7 +17,7 @@ export default async function handler(
     return res.status(405).end()
   }
 
-  const emailOwner = String(req.query.email)
+  const emailOwner = env.NEXT_EMAIL_OWNER
 
   const user = await prisma.user.findUnique({
     where: {
@@ -30,12 +31,13 @@ export default async function handler(
 
   const createSchedulingBody = z.object({
     name: z.string(),
+    petName: z.string(),
     email: z.string().email(),
     observations: z.string(),
     date: z.string().datetime(),
   })
 
-  const { name, email, observations, date } = createSchedulingBody.parse(
+  const { name, petName, email, observations, date } = createSchedulingBody.parse(
     req.body,
   )
 
@@ -63,6 +65,7 @@ export default async function handler(
   const scheduling = await prisma.scheduling.create({
     data: {
       name,
+      petName,
       email,
       observations,
       date: schedulingDate.toDate(),
@@ -80,7 +83,7 @@ export default async function handler(
     calendarId: 'primary',
     conferenceDataVersion: 1,
     requestBody: {
-      summary: `PetShop: Paciente ${name} `,
+      summary: `PetShop: Cliente ${name} do pet ${petName}`,
       description: observations,
       start: {
         dateTime: schedulingDate.format(),

@@ -11,13 +11,22 @@ import { CalendarBlank, Clock } from "phosphor-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { api } from "@/lib/axios";
-import { ConfirmForm, FormActions, FormError, FormHeader, Select } from "./styles";
+import {
+  ConfirmForm,
+  FormActions,
+  FormError,
+  FormHeader,
+  Select,
+} from "./styles";
 
 import { ToastContainer, toast } from "react-toastify";
 import { ContainerLogin } from "../../styles";
 import { useSession } from "next-auth/react";
 const confirmFormSchema = z.object({
   name: z.string().min(3, { message: "O nome precisa no mínimo 3 caracteres" }),
+  petName: z
+    .string()
+    .min(3, { message: "O nome do pet precisa no mínimo 3 caracteres" }),
   email: z.string().email({ message: "Digite um e-mail válido" }),
   observations: z
     .enum(["Banho e tosa", "Vacinas", "Ração", "Medicamentos"])
@@ -49,7 +58,7 @@ export function ConfirmStep({
     defaultValues: {
       name: session.data?.user.name,
       email: session.data?.user.email,
-      observations: "Banho e tosa",
+      observations: "Vacinas",
     },
     resolver: zodResolver(confirmFormSchema),
   });
@@ -92,6 +101,14 @@ export function ConfirmStep({
             <TextInput placeholder="Seu nome" {...register("name")} />
             {errors.name && (
               <FormError size="sm">{errors.name.message}</FormError>
+            )}
+          </label>
+
+          <label>
+            <Text size="sm">Nome do pet</Text>
+            <TextInput placeholder="Nome do pet" {...register("petName")} />
+            {errors.petName && (
+              <FormError size="sm">{errors.petName.message}</FormError>
             )}
           </label>
 
