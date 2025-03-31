@@ -49,7 +49,7 @@ export function buildNextAuthOptions(
             pass: env.NEXT_API_KEY,
           },
         },
-        from: `PetShop <no-reply-petshop@${env.NEXT_EMAIL_FROM}>`,
+        from: `PetShop <petshop-noreply@${env.NEXT_EMAIL_FROM}>`,
         sendVerificationRequest({
           identifier: email,
           url,

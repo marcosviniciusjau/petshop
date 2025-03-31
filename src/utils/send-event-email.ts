@@ -15,7 +15,7 @@ export async function sendEventEmail(identifier: string, schedulingDate: string)
     const schedulingDateBefore = dayjs(schedulingDate).subtract(30, 'minutes').format()
     const emailResponseBefore = await resend.emails.send({
       to: identifier,
-      from: `Petshop <noreplypetshop@${env.NEXT_EMAIL_FROM}>`,
+      from: `Petshop <petshop-noreply@${env.NEXT_EMAIL_FROM}>`,
       subject: `Lembrete do tratamento - Petshop`,
       text: text(),
       scheduledAt: schedulingDateBefore,
@@ -24,7 +24,7 @@ export async function sendEventEmail(identifier: string, schedulingDate: string)
 
     const emailResponseInTime = await resend.emails.send({
       to: identifier,
-      from: `Petshop <noreplypetshop@${env.NEXT_EMAIL_FROM}>`,
+      from: `Petshop <petshop-noreply@${env.NEXT_EMAIL_FROM}>`,
       subject: `Lembrete do tratamento - Petshop`,
       text: text(),
       scheduledAt: schedulingDate,
@@ -47,9 +47,9 @@ export async function sendEventEmail(identifier: string, schedulingDate: string)
 
 function htmlBefore(schedulingDate: string) {
   const schedulingDateFormat = dayjs.utc(schedulingDate)
-  .tz(dayjs.tz.guess())
-  .startOf('hour')
-  .format('HH:mm DD-MM-YYYY');
+    .tz(dayjs.tz.guess())
+    .startOf('hour')
+    .format('HH:mm DD-MM-YYYY');
   const brandColor = "#346df1"
   const color = {
     background: "#f9f9f9",
@@ -96,9 +96,9 @@ Se você não solicitou esse email, por favor apenas ignore
 
 function htmlInTime(schedulingDate: string) {
   const schedulingDateFormat = dayjs.utc(schedulingDate)
-  .tz(dayjs.tz.guess())
-  .startOf('hour')
-  .format('HH:mm DD-MM-YYYY');
+    .tz(dayjs.tz.guess())
+    .startOf('hour')
+    .format('HH:mm DD-MM-YYYY');
   const brandColor = "#346df1"
   const color = {
     background: "#f9f9f9",
