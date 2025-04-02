@@ -1,14 +1,13 @@
 # PetShop
 
-PetShop is a dentist website where patients can select their preferred date and time for appointments with just a few clicks.
+PetShop is a petshop website where customer can select their preferred date and time for appointments for their pets with just a few clicks.
 
 # Features
 
-Easy Appointment Scheduling: Patients can select their preferred date and time for appointments with just a few clicks.
-Google Calendar Integration: Dentists can manage their appointments directly through Google Calendar.
-Teleconsultation: Automatically schedule Google Meet sessions for virtual consultations.
+Easy Appointment Scheduling: Customers can select their preferred date and time for appointments with just a few clicks.
+Google Calendar Integration: Owners can manage their appointments directly through Google Calendar.
 Responsive Design: Accessible on both desktop and mobile devices.
-Login with NextAuth using Prisma Adapter for the doctor with Google and for the pacients using email verification links sending by resend
+Login with NextAuth using Prisma Adapter for the owner with Google and for the customers using email verification links sending by resend
 
 # Technologies Used
 
@@ -24,7 +23,6 @@ Resend
 # Backend:
 
 Node.js
-Express
 Axios
 
 # Database:
@@ -51,4 +49,5 @@ Day.js
 
 # Here is a video demostration on mobile:
 
-https://github.com/user-attachments/assets/5d89abc5-fb6b-490e-9995-3fa8f9369184
+https://github.com/user-attachments/assets/7211469a-1ad2-4bb7-9d9e-3394b0a425d9
+
