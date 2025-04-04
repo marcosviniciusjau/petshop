@@ -65,6 +65,7 @@ export default async function handler(
   const scheduling = await prisma.scheduling.create({
     data: {
       name,
+      //@ts-ignore
       petName,
       email,
       observations,
