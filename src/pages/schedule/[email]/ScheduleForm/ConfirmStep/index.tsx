@@ -53,10 +53,10 @@ export function ConfirmStep({
     register,
     handleSubmit,
     formState: { isSubmitting, errors },
-    // eslint-disable-next-line react-hooks/rules-of-hooks
   } = useForm<ConfirmFormData>({
     defaultValues: {
       name: session.data?.user.name,
+      petName: "Como você chama seu pet ou descrição dele",
       email: session.data?.user.email,
       observations: "Vacinas",
     },
@@ -64,11 +64,12 @@ export function ConfirmStep({
   });
 
   async function handleConfirmScheduling(data: ConfirmFormData) {
-    const { name, email, observations } = data;
+    const { name, petName, email, observations } = data;
 
     try {
       await api.post(`/users/${emailOwner}/schedule`, {
         name,
+        petName,
         email,
         observations,
         date: schedulingDate,
