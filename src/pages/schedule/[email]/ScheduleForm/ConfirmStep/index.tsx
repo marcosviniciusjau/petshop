@@ -56,7 +56,7 @@ export function ConfirmStep({
   } = useForm<ConfirmFormData>({
     defaultValues: {
       name: session.data?.user.name,
-      petName: "Como você chama seu pet ou descrição dele",
+      petName: "",
       email: session.data?.user.email,
       observations: "Vacinas",
     },
