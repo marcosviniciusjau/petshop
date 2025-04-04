@@ -29,8 +29,8 @@ const confirmFormSchema = z.object({
     .min(3, { message: "O nome do pet precisa no mínimo 3 caracteres" }),
   email: z.string().email({ message: "Digite um e-mail válido" }),
   observations: z
-    .enum(["Banho e tosa", "Vacinas", "Ração", "Medicamentos"])
-    .default("Banho e tosa"),
+    .enum(["Banho e Tosa", "Vacinas", "Ração", "Medicamentos"])
+    .default("Vacinas"),
 });
 
 type ConfirmFormData = z.infer<typeof confirmFormSchema>;
@@ -127,9 +127,10 @@ export function ConfirmStep({
           <label>
             <Text size="sm">Observações</Text>
             <Select {...register("observations")} style={{ width: "100%" }}>
-              <option value="Check-up">Check-up</option>
-              <option value="Tratamento">Tratamento</option>
-              <option value="Implante">Implante</option>
+              <option value="Banho e Tosa">Banho e Tosa</option>
+              <option value="Medicamentos">Medicamentos</option>
+              <option value="Vacinas">Vacinas</option>
+              <option value="Ração">Ração</option>
             </Select>
           </label>
 
